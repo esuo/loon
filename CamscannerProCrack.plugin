@@ -1,0 +1,12 @@
+#!name=Camscanner Pro
+#!desc=解锁 CamScanner 专业版全部功能 | 原脚本作者 ddgksf2013 | Loon 版 by esuo
+#!icon=https://www.camscanner.com/icon/logo_192.png
+#!author=ddgksf2013（Loon 适配）
+#!homepage=https://github.com/ddgksf2013/dev/raw/main/CamscannerProCrack.js
+#!updateUrl=https://raw.githubusercontent.com/esuo/loon/main/CamscannerProCrack.plugin
+
+[MITM]
+hostname = ap*.intsig.net, api.intsig.net, api-cs.intsig.net
+
+[Script]
+CamScanner Pro Crack = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/ddgksf2013/dev/main/CamscannerProCrack.js, requires-body=true, timeout=60, tag=CamScanner-Pro
