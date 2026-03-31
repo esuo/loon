@@ -1,0 +1,33 @@
+# Apple Intelligence / OpenAI 分流规则 (Loon 专用 list 文件)
+# 专为大陆用户解锁 Apple Intelligence（含 ChatGPT 扩展）设计
+# 仅路由必要域名到 PROXY，不会影响 App Store、iCloud 等其他 Apple 服务
+# 来源：Apple 官方支持文档 (support.apple.com/zh-cn/101555) + 社区验证
+# 使用方法：
+# 1. 将下方全部内容保存为 apple-intelligence.list
+# 2. 上传到你的 GitHub 仓库（建议 raw 链接）
+# 3. 在 Loon 配置中添加：
+#    RULE-SET,https://raw.githubusercontent.com/esuo/loon/main/AppleIntelligence.list,PROXY
+# 4. 规则放在 Apple 相关规则之后、最终规则之前即可
+
+# === ChatGPT / OpenAI ===
+DOMAIN-SUFFIX, chatgpt.com
+DOMAIN-SUFFIX, openai.com
+DOMAIN-SUFFIX, oaistatic.com
+DOMAIN-SUFFIX, oaiusercontent.com
+DOMAIN-SUFFIX, ai.com
+DOMAIN-SUFFIX, auth0.com
+DOMAIN-SUFFIX, sentry.io
+
+# === Apple Intelligence / Siri / Private Cloud Compute ===
+# 官方必须域名（2026 年最新）
+DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
+
+# 地区检测 & ChatGPT 扩展关键域名（iOS 26.1+ 必需，否则扩展不可用）
+DOMAIN,gspe1-ssl.ls.apple.com
+
+# 规则结束
